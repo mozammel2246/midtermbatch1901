@@ -1,4 +1,4 @@
-package java.io;
+package java.inputoutput;
 
 public class DataReader {
 
