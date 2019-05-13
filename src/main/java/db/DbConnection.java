@@ -135,6 +135,24 @@ public class DbConnection {
 
     }
 
+    public static void createTableFromStringToMySqlWithMultipleFields(String tableName, String column1, String column2, String column3, String column4, String column5){
+        try {
+            connectMySql();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`employeeID` int(11) NOT NULL AUTO_INCREMENT,`"+column1+"` varchar(50) NOT NULL,`"+column2+"` varchar(50) NOT NULL,`"+column3+"` varchar(20) DEFAULT NULL,`"+column4+"` int(20) NOT NULL,`"+column5+"` int(20) NOT NULL,  PRIMARY KEY (`employeeID`) );");
+            ps.executeUpdate();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     /**
      *
      * Insert data to a existing table
@@ -147,6 +165,26 @@ public class DbConnection {
 
             for(String st:list){
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setObject(1,st);
+                ps.executeUpdate();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertDataWithArrayListToMySql(List<String> list,String tableName, String column1, String column2)
+    {
+        try {
+            connectMySql();
+
+            for(String st:list){
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+column1+", "+column2+"/* ) VALUES(?, ?)");
                 ps.setObject(1,st);
                 ps.executeUpdate();
             }

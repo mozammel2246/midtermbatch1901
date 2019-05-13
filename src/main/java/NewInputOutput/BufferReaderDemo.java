@@ -1,4 +1,4 @@
-package java.inputoutput;
+package NewInputOutput;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ public class BufferReaderDemo {
      * */
         public static void main(String[] args) throws IOException {
 
-            File fl = new File(System.getProperty("user.dir") + ("/src/main/resources/Key-To-Success.txt"));
+            File fl = new File(System.getProperty("user.dir") + ("/src/main/resources/Key-To-Success"));
 
             FileReader fr = new FileReader(fl.getAbsoluteFile());
             BufferedReader bufferedReader = new BufferedReader(fr);

@@ -11,4 +11,22 @@ public class SalaryCalulator {
      * This class consists only helper methods, you should not declare any main method here.
      * Main method is being declared in App class
      * */
+
+    /*
+    * employeeID, firstName, lastName, dateOfBirth, grossSalary, netSalary
+    *
+    * */
+   /* double monthlySalary;
+    public static double calculateMonthlySalary(double actualSalary){
+        this.monthlySalary = actualSalary - 0.35*actualSalary;
+        System.out.println(monthlySalary);
+        return monthlySalary;
+
+    }
+
+    public static double calculateYearlySalary(){
+        double yearlySalary = monthlySalary*12;
+        System.out.println(yearlySalary);
+        return yearlySalary;
+    }*/
 }

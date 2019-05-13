@@ -1,5 +1,12 @@
 package accounts;
 
+import db.DbConnection;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
 
     /**
@@ -9,6 +16,13 @@ public class App {
      * */
 
     public static void main(String[] args) {
+       /* SalaryCalulator.calculateMonthlySalary(1000);
+        SalaryCalulator.calculateYearlySalary();*/
 
+        //DbConnection.createTableFromStringToMySqlWithMultipleFields("employees", "firstName", "lastName", "dateOfBirth", "grossSalary", "netSalary");
+       /* DbConnection.
+        List<String> list = new ArrayList<>();
+        list.add(2, "NY office, Jamaica");
+        DbConnection.insertDataWithArrayListToMySql(list, "student", "studentName", "studentAdd");*/
     }
 }
