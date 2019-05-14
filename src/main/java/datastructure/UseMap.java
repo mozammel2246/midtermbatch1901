@@ -1,9 +1,6 @@
 package datastructure;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UseMap {
 
@@ -16,9 +13,12 @@ public class UseMap {
 		 * You can use any other retrieval process
 		 * Use any databases[ MySql] to store data and retrieve data.
 		 */
-		/*Map<String, List<String>> list = new HashMap<String, List<String>>();
-		List<String> password = new ArrayList<>();
-		list.put("lal",) ;*/
+		Map<String, List<String>> list = new HashMap<String, List<String>>();
+		list.put("UserId", Arrays.asList("Mozammel1234")) ;
+		list.put("Password", Arrays.asList("xyz123"));
+
+		list.forEach((key, value) -> System.out.println(key + " - " + value));
+
 
 	}
 
