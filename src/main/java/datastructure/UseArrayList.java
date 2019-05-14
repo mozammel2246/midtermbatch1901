@@ -1,5 +1,8 @@
 package datastructure;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UseArrayList {
 
 	public static void main(String[] args) {
@@ -11,7 +14,21 @@ public class UseArrayList {
 		 * Store all the sorted data into one of the databases.
 		 * 
 		 */
-	
+		List<String> list =new ArrayList<>();
+		list.add("add");
+		list.add("peek");
+		list.add("remove");
+		list.add("retrieve");
+		list.add("add");
+		list.forEach(str -> System.out.println(str));
+
+
+		ArrayList arrayList=new ArrayList();
+		arrayList.add("karim");
+		arrayList.add("rahim");
+		arrayList.add("jamil");
+		arrayList.remove(2);
+		arrayList.forEach(str -> System.out.println(str));
 
 	}
 
