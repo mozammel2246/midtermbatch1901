@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Palindrome {
     public static void isPalindrome(String a){
         boolean status = true;
-        char[] word = a.toCharArray();
+        char[] word = a.toLowerCase().toCharArray();
 
         int i1 = 0;
         int i2 = word.length - 1;
@@ -24,7 +24,7 @@ public class Palindrome {
         System.out.println((a + " is a palindrome word : " + status));
     }
     public static void main(String[] args) {
-       isPalindrome("race");
+       isPalindrome("Racecar");
 
     }
 }

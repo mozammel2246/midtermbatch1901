@@ -23,10 +23,10 @@ public class App {
         SalaryCalulator.calculateYearlySalary();*/
 
         //DbConnection.createTableFromStringToMySqlWithMultipleFields("employees", "firstName", "lastName", "dateOfBirth", "grossSalary", "netSalary");
-        List<String> list = Arrays.asList("abc 01", "acb02");
-        DbConnection.insertDataFromArrayListToMySql(list, "office", "officeAdd");
-        /*List<String> list = Arrays.asList(("Rahim", "Karim", "Alam"),("NY", "MD", "NC"));
-        DbConnection.insertDataWithArrayListToMySql(list, "student", "studentName", "studentAdd");*/
+        //List<String> list = Arrays.asList("abc 01", "acb02");
+        //DbConnection.insertDataFromArrayListToMySql(list, "office", "officeAdd");
+       // List<String> list = Arrays.asList(("Rahim", "Karim", "Alam"),("NY", "MD", "NC"));
+        //DbConnection.insertDataWithArrayListToMySql(list, "student", "studentName", "studentAdd");
        /* List<String> a = Arrays.asList("Karim", "Rahim");
         List<String> b = Arrays.asList("NY", "MD");
         DbConnection.insertDataWithArrayListToMySql((a,b), );*/

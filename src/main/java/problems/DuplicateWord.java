@@ -1,5 +1,11 @@
 package problems;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Created by mrahman on 04/22/17.
  */
@@ -22,7 +28,7 @@ public class DuplicateWord {
         //Split the string into words using built-in function
         String[] words = st.split(" ");
 
-        System.out.println("Duplicate words in a given string : ");
+        System.out.println("Duplicate words in this given string : ");
         for(int i = 0; i < words.length; i++) {
             count = 1;
             for(int j = i+1; j < words.length; j++) {
@@ -34,9 +40,10 @@ public class DuplicateWord {
             }
 
             //Displays the duplicate word if count is greater than 1
-            if(count > 1 && words[i] != "0")
-                System.out.println(words[i]);
+            if(count > 1 && words[i] != "0") {
+                System.out.println(words[i] + " " + count);
+
+            }
         }
     }
-
 }
